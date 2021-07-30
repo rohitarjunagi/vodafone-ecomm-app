@@ -49,9 +49,9 @@ describe('Users Products API', async () => {
       return request(app)
         .get(`/v1/userProducts/?customerId=${customerId}`)
         .expect(200)
-        .then((res) => {
-          res.body.map((res) => delete res.createdAt);
-          expect(res.body).to.eql(expectedResponse);
+        .then((response) => {
+          response.body.map((res) => delete res.createdAt);
+          expect(response.body).to.eql(expectedResponse);
         });
     });
 
