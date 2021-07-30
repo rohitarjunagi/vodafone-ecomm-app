@@ -8,7 +8,7 @@ const userProductsSchema = new mongoose.Schema({
   customerId: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   basket: {
     basketId: {
