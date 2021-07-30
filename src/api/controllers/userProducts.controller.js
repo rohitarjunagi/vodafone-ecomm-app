@@ -8,7 +8,9 @@ const UserProducts = require('../models/userProducts.model');
 exports.getUserProducts = async (req, res, next) => {
   try {
     const userProducts = await UserProducts.find(req.query);
-    const transformedUserProducts = userProducts.map((userProduct) => transformUserProducts(userProduct));
+    const transformedUserProducts = userProducts.map((userProduct) => (
+      transformUserProducts(userProduct)
+    ));
     res.json(transformedUserProducts);
   } catch (error) {
     next(error);
@@ -17,13 +19,13 @@ exports.getUserProducts = async (req, res, next) => {
 
 const transformUserProducts = (userProduct) => {
   let products = userProduct.basket.products || [];
-  products = products.map((product) => {
-    return {
+  products = products.map((product) => (
+    {
       id: product.id,
       name: product.name,
       price: product.price,
-    };
-  });
+    }
+  ));
   return {
     customerId: userProduct.customerId,
     basket: {
