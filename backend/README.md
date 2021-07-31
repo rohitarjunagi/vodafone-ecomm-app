@@ -1,4 +1,4 @@
-# Vodafone Ecomm App Backend Api
+# Vodafone Ecomm App Front end React App
 This project is cloned and extended from https://github.com/danielfsousa/express-rest-boilerplate
 
 ## Getting Started
