@@ -3,12 +3,6 @@ This project is cloned and extended from https://github.com/danielfsousa/express
 
 ## Getting Started
 
-#### Clone the repo:
-
-```bash
-git clone git@github.com:rohitarjunagi/vodafone-ecomm-backend.git
-```
-
 #### Install dependencies:
 
 ```bash
